@@ -91,7 +91,7 @@
 #ifdef X_STALL_SENSITIVITY
   #define X_STOP_PIN                  X_DIAG_PIN
   #if X_HOME_TO_MIN
-    #define X_MAX_PIN                E0_DIAG_PIN  // E0DET
+    #define X_MAX_PIN                E2_DIAG_PIN  // E0DET /*MM E0_DIAG_PIN */
   #else
     #define X_MIN_PIN                E0_DIAG_PIN  // E0DET
   #endif
@@ -100,7 +100,7 @@
     #define X_MIN_PIN                 X_DIAG_PIN  // X-STOP
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                E0_DIAG_PIN  // E0DET
+    #define X_MAX_PIN                 E2_DIAG_PIN  // E0DET /*MM E0_DIAG_PIN */
   #endif
 #else
   #define X_STOP_PIN                  X_DIAG_PIN  // X-STOP
@@ -151,8 +151,8 @@
 //
 #define FIL_RUNOUT_PIN                      PG12  // E0DET
 #define FIL_RUNOUT2_PIN                     PG13  // E1DET
-#define FIL_RUNOUT3_PIN                     PG14  // E2DET
-#define FIL_RUNOUT4_PIN                     PG15  // E3DET
+//#define FIL_RUNOUT3_PIN                     PG14  // E2DET /*MM <NOT>//*/
+//#define FIL_RUNOUT4_PIN                     PG15  // E3DET /*MM <NOT>//*/
 
 //
 // Power Supply Control
@@ -547,3 +547,11 @@
 #define ESP_WIFI_MODULE_ENABLE_PIN          PG8
 #define ESP_WIFI_MODULE_GPIO0_PIN           PD7
 #define ESP_WIFI_MODULE_GPIO4_PIN           PD10
+
+/**
+ * MM Additional setting
+ * 
+ */
+ 
+//Chamber
+#define TEMP_CHAMBER_PIN TEMP_2_PIN
